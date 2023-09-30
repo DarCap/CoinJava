@@ -1,0 +1,31 @@
+import java.util.Random;
+public class Coin {
+    public String moneta;
+
+    public Coin() {
+       this.moneta="";
+    }
+
+    public boolean Lancio()
+    {
+        int num;
+        Random generator = new Random();
+        num=generator.nextInt(2);
+        return num == 0;
+    }
+    public String isMoneta() {
+        return this.moneta;
+    }
+
+    public void setMoneta() {
+        boolean go=Lancio();
+        if(go)
+        {
+            this.moneta = "testa";
+        }
+        else
+        {
+            this.moneta = "croce";
+        }
+    }
+}
